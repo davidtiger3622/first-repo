@@ -1,0 +1,43 @@
+Line-by-Line Explanation of the Java Interest Calculator Program
+
+1.  import java.util.Scanner;
+    -   Imports the Scanner class so the program can read user input.
+2.  public class InterestCalculator {
+    -   Declares a public class named InterestCalculator.
+3.  public static void main(String[] args) {
+    -   The main method where program execution begins.
+4.  Scanner input = new Scanner(System.in);
+    -   Creates a Scanner object to read input from the keyboard.
+5.  System.out.print(“Enter Principal Amount:”);
+    -   Asks the user to enter the principal amount.
+6.  double principal = input.nextDouble();
+    -   Stores the entered principal amount as a double.
+7.  System.out.print(“Enter Rate of Interest (%):”);
+    -   Prompts the user to enter the interest rate.
+8.  double rate = input.nextDouble();
+    -   Stores the entered interest rate.
+9.  System.out.print(“Enter Time (in years):”);
+    -   Prompts the user to enter the time in years.
+10. int time = input.nextInt();
+    -   Stores the entered time as an integer.
+11. double simpleInterest = (principal * rate * time) / 100;
+    -   Calculates simple interest using the formula SI = P × R × T /
+        100.
+12. double amount = principal * Math.pow((1 + rate / 100), time);
+    -   Calculates final amount after compound interest using A = P(1 +
+        R/100)^T.
+13. double compoundInterest = amount - principal;
+    -   Calculates compound interest by subtracting principal from
+        amount.
+14. System.out.println(“—– Results —–”);
+    -   Prints a results header.
+15. System.out.println(“Simple Interest:” + simpleInterest);
+    -   Displays the simple interest value.
+16. System.out.println(“Compound Interest:” + compoundInterest);
+    -   Displays the compound interest value.
+17. input.close();
+    -   Closes the Scanner to free resources.
+18. }
+    -   Closes the main method.
+19. }
+    -   Closes the class.
